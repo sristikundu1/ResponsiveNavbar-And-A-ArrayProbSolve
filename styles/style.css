@@ -1,0 +1,163 @@
+/* style that add in all element */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: serif;
+    text-decoration: none;
+
+}
+
+.header {
+    padding: 15px 40px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #caf0f8;
+
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+
+a {
+    font-size: 25px;
+    font-weight: 500;
+    color: #0077b6;
+
+}
+
+/* style for mouse hover  */
+a.active,
+a:hover {
+    color: #022b3a;
+    transition: all 0.2s;
+
+}
+
+/* style of the icon that will only show in the small device  */
+#menusection {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menunavicon {
+    width: 30px;
+    height: 30px;
+}
+
+#close {
+    display: none;
+}
+
+/* banner style  */
+section {
+    width: auto;
+    height: 450px;
+    /* background-color: #48cae4; */
+
+}
+
+.bannerimag {
+    object-fit: cover;
+    width: 100%;
+    height: 450px;
+}
+
+/* footer style  */
+footer {
+    width: auto;
+    height: auto;
+    overflow-y: hidden;
+    background-color: #669bbc;
+}
+
+.footerText {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 52px;
+    padding-bottom: 52px;
+    font-weight: 600;
+    color: white;
+}
+
+
+/* responsive style */
+@media screen and (max-width:765px) {
+    .header {
+        position: relative;
+    }
+
+    #menusection {
+        display: block;
+
+    }
+
+    #logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    a {
+        font-size: 15px;
+        color: #0077b6;
+
+    }
+
+    #navbar {
+        /* display: none; */
+        width: 120px;
+        height: 100px;
+        background-color: #d8f3dc;
+
+
+        position: absolute;
+        top: -110px;
+        right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #0a9396;
+        border-radius: 10px;
+        transition: all 0.5s;
+        visibility: hidden;
+    }
+
+    .active #navbar {
+        top: 55px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .active #menusection #menu {
+        display: none;
+
+    }
+
+    .active #menusection #close {
+        display: block;
+    }
+
+    .footerText {
+        font-size: 15px;
+    }
+
+
+}
